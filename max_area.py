@@ -9,14 +9,10 @@ def max_area(height):
             distance -= 1
         
 
-        elif(height[left] > height[right]):
+        else:
             right -= 1
             distance -= 1
 
-        else:
-            right-=1
-            left+=1
-            distance-=2
 
         current_area=min(height[left],height[right]) * distance
         if(current_area>max_area):
