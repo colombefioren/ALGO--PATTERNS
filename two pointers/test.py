@@ -1,1 +1,0 @@
-print(sorted([5,3]))
