@@ -6,7 +6,7 @@ def longest_k_substr(s,k):
     for right in range(n):
         seen[s[right]] = seen.get(s[right],0) + 1
 
-        while len(seen) > k and left < n - 1:
+        while len(seen) > k:
             seen[s[left]] -= 1
             if seen[s[left]] == 0:
                 del seen[s[left]]
