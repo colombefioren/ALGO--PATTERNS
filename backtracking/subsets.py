@@ -3,20 +3,18 @@ class Solution:
         result = []
         def backtracking(index,path):
             
-            if index == len(nums):
-                result.append(path[:])
-                return
+            result.append(path[:])
             
-            path.append(nums[index])
-            backtracking(index+1,path) 
-            path.pop()
+            for i in range(index,len(nums)):
 
-            backtracking(index+1,path)
-        
+                path.append(nums[i])
+                backtracking(i+1,path) 
+                path.pop()
+
 
         backtracking(0,[])
         return result
 
 
 
-print(Solution().subset([1,2,2]))
+print(Solution().subset([1,2]))
